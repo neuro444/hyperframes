@@ -1,0 +1,1092 @@
+{
+  "total": 79.26,
+  "frames": [
+    {
+      "n": 1,
+      "id": "01-incoming-call",
+      "start": 0,
+      "end": 5.5,
+      "dur": 5.5
+    },
+    {
+      "n": 2,
+      "id": "02-answered",
+      "start": 5.5,
+      "end": 8,
+      "dur": 2.5
+    },
+    {
+      "n": 3,
+      "id": "03-greeting",
+      "start": 8,
+      "end": 20.46,
+      "dur": 12.46
+    },
+    {
+      "n": 4,
+      "id": "04-the-order",
+      "start": 20.46,
+      "end": 38.2,
+      "dur": 17.74
+    },
+    {
+      "n": 5,
+      "id": "05-name-recap",
+      "start": 38.2,
+      "end": 60.38,
+      "dur": 22.18
+    },
+    {
+      "n": 6,
+      "id": "06-confirmed",
+      "start": 60.38,
+      "end": 68.92,
+      "dur": 8.54
+    },
+    {
+      "n": 7,
+      "id": "07-goodbye-end",
+      "start": 68.92,
+      "end": 79.26,
+      "dur": 10.34
+    }
+  ],
+  "lines": [
+    {
+      "n": 1,
+      "id": "line01",
+      "speaker": "F",
+      "src": ".media/audio/voice/line01.wav",
+      "dur": 5.172245,
+      "start": 8.3,
+      "end": 13.47,
+      "words": [
+        {
+          "id": "w0",
+          "text": "Hi!",
+          "start": 0.159,
+          "end": 0.62
+        },
+        {
+          "id": "w1",
+          "text": "Thank",
+          "start": 1.22,
+          "end": 1.379
+        },
+        {
+          "id": "w2",
+          "text": "you",
+          "start": 1.419,
+          "end": 1.5
+        },
+        {
+          "id": "w3",
+          "text": "for",
+          "start": 1.539,
+          "end": 1.599
+        },
+        {
+          "id": "w4",
+          "text": "calling",
+          "start": 1.699,
+          "end": 2
+        },
+        {
+          "id": "w5",
+          "text": "Cake",
+          "start": 2.059,
+          "end": 2.259
+        },
+        {
+          "id": "w6",
+          "text": "World",
+          "start": 2.319,
+          "end": 2.539
+        },
+        {
+          "id": "w7",
+          "text": "Eatery.",
+          "start": 2.619,
+          "end": 3.039
+        },
+        {
+          "id": "w8",
+          "text": "What",
+          "start": 3.419,
+          "end": 3.5
+        },
+        {
+          "id": "w9",
+          "text": "would",
+          "start": 3.539,
+          "end": 3.659
+        },
+        {
+          "id": "w10",
+          "text": "you",
+          "start": 3.699,
+          "end": 3.779
+        },
+        {
+          "id": "w11",
+          "text": "like",
+          "start": 3.819,
+          "end": 3.919
+        },
+        {
+          "id": "w12",
+          "text": "to",
+          "start": 4,
+          "end": 4.099
+        },
+        {
+          "id": "w13",
+          "text": "order",
+          "start": 4.159,
+          "end": 4.44
+        },
+        {
+          "id": "w14",
+          "text": "today?",
+          "start": 4.48,
+          "end": 4.859
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "id": "line02",
+      "speaker": "T",
+      "src": ".media/audio/voice/line02.wav",
+      "dur": 1.671837,
+      "start": 14.07,
+      "end": 15.74,
+      "words": [
+        {
+          "id": "w0",
+          "text": "I'd",
+          "start": 0.119,
+          "end": 0.239
+        },
+        {
+          "id": "w1",
+          "text": "like",
+          "start": 0.28,
+          "end": 0.359
+        },
+        {
+          "id": "w2",
+          "text": "to",
+          "start": 0.379,
+          "end": 0.459
+        },
+        {
+          "id": "w3",
+          "text": "place",
+          "start": 0.5,
+          "end": 0.659
+        },
+        {
+          "id": "w4",
+          "text": "a",
+          "start": 0.68,
+          "end": 0.759
+        },
+        {
+          "id": "w5",
+          "text": "pickup",
+          "start": 0.779,
+          "end": 1.039
+        },
+        {
+          "id": "w6",
+          "text": "order.",
+          "start": 1.1,
+          "end": 1.399
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "id": "line03",
+      "speaker": "F",
+      "src": ".media/audio/voice/line03.wav",
+      "dur": 3.422041,
+      "start": 16.34,
+      "end": 19.76,
+      "words": [
+        {
+          "id": "w0",
+          "text": "Great!",
+          "start": 0.179,
+          "end": 0.639
+        },
+        {
+          "id": "w1",
+          "text": "Is",
+          "start": 1.019,
+          "end": 1.139
+        },
+        {
+          "id": "w2",
+          "text": "this",
+          "start": 1.179,
+          "end": 1.299
+        },
+        {
+          "id": "w3",
+          "text": "a",
+          "start": 1.339,
+          "end": 1.399
+        },
+        {
+          "id": "w4",
+          "text": "regular",
+          "start": 1.419,
+          "end": 1.839
+        },
+        {
+          "id": "w5",
+          "text": "pickup",
+          "start": 1.86,
+          "end": 2.22
+        },
+        {
+          "id": "w6",
+          "text": "or",
+          "start": 2.319,
+          "end": 2.419
+        },
+        {
+          "id": "w7",
+          "text": "a",
+          "start": 2.46,
+          "end": 2.48
+        },
+        {
+          "id": "w8",
+          "text": "cake",
+          "start": 2.579,
+          "end": 2.799
+        },
+        {
+          "id": "w9",
+          "text": "order?",
+          "start": 2.879,
+          "end": 3.139
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "id": "line04",
+      "speaker": "T",
+      "src": ".media/audio/voice/line04.wav",
+      "dur": 9.874286,
+      "start": 20.76,
+      "end": 30.63,
+      "words": [
+        {
+          "id": "w0",
+          "text": "A",
+          "start": 0.259,
+          "end": 0.379
+        },
+        {
+          "id": "w1",
+          "text": "regular",
+          "start": 0.399,
+          "end": 0.759
+        },
+        {
+          "id": "w2",
+          "text": "pickup.",
+          "start": 0.859,
+          "end": 1.279
+        },
+        {
+          "id": "w3",
+          "text": "I'd",
+          "start": 1.779,
+          "end": 1.959
+        },
+        {
+          "id": "w4",
+          "text": "like",
+          "start": 2.019,
+          "end": 2.22
+        },
+        {
+          "id": "w5",
+          "text": "one",
+          "start": 2.339,
+          "end": 2.559
+        },
+        {
+          "id": "w6",
+          "text": "Gobi",
+          "start": 2.679,
+          "end": 2.939
+        },
+        {
+          "id": "w7",
+          "text": "Manchurian,",
+          "start": 3,
+          "end": 3.699
+        },
+        {
+          "id": "w8",
+          "text": "one",
+          "start": 4.259,
+          "end": 4.44
+        },
+        {
+          "id": "w9",
+          "text": "Samosa,",
+          "start": 4.539,
+          "end": 5.119
+        },
+        {
+          "id": "w10",
+          "text": "one",
+          "start": 5.719,
+          "end": 5.9
+        },
+        {
+          "id": "w11",
+          "text": "Paneer",
+          "start": 6,
+          "end": 6.379
+        },
+        {
+          "id": "w12",
+          "text": "Tikka",
+          "start": 6.519,
+          "end": 6.779
+        },
+        {
+          "id": "w13",
+          "text": "Masala",
+          "start": 6.839,
+          "end": 7.44
+        },
+        {
+          "id": "w14",
+          "text": "and",
+          "start": 7.919,
+          "end": 8.06
+        },
+        {
+          "id": "w15",
+          "text": "one",
+          "start": 8.22,
+          "end": 8.359
+        },
+        {
+          "id": "w16",
+          "text": "Veg",
+          "start": 8.479,
+          "end": 8.779
+        },
+        {
+          "id": "w17",
+          "text": "Biriyani.",
+          "start": 8.88,
+          "end": 9.519
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "id": "line05",
+      "speaker": "F",
+      "src": ".media/audio/voice/line05.wav",
+      "dur": 3.683265,
+      "start": 31.23,
+      "end": 34.91,
+      "words": [
+        {
+          "id": "w0",
+          "text": "Certainly.",
+          "start": 0.259,
+          "end": 0.819
+        },
+        {
+          "id": "w1",
+          "text": "Would",
+          "start": 1.179,
+          "end": 1.319
+        },
+        {
+          "id": "w2",
+          "text": "you",
+          "start": 1.36,
+          "end": 1.439
+        },
+        {
+          "id": "w3",
+          "text": "like",
+          "start": 1.5,
+          "end": 1.659
+        },
+        {
+          "id": "w4",
+          "text": "to",
+          "start": 1.679,
+          "end": 1.779
+        },
+        {
+          "id": "w5",
+          "text": "add",
+          "start": 1.899,
+          "end": 2.059
+        },
+        {
+          "id": "w6",
+          "text": "or",
+          "start": 2.119,
+          "end": 2.159
+        },
+        {
+          "id": "w7",
+          "text": "modify",
+          "start": 2.259,
+          "end": 2.659
+        },
+        {
+          "id": "w8",
+          "text": "anything",
+          "start": 2.7,
+          "end": 3.039
+        },
+        {
+          "id": "w9",
+          "text": "else?",
+          "start": 3.079,
+          "end": 3.379
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "id": "line06",
+      "speaker": "T",
+      "src": ".media/audio/voice/line06.wav",
+      "dur": 1.985306,
+      "start": 35.51,
+      "end": 37.5,
+      "words": [
+        {
+          "id": "w0",
+          "text": "No,",
+          "start": 0.179,
+          "end": 0.759
+        },
+        {
+          "id": "w1",
+          "text": "that's",
+          "start": 0.779,
+          "end": 1
+        },
+        {
+          "id": "w2",
+          "text": "everything.",
+          "start": 1.019,
+          "end": 1.419
+        }
+      ]
+    },
+    {
+      "n": 7,
+      "id": "line07",
+      "speaker": "F",
+      "src": ".media/audio/voice/line07.wav",
+      "dur": 1.802449,
+      "start": 38.5,
+      "end": 40.3,
+      "words": [
+        {
+          "id": "w0",
+          "text": "May",
+          "start": 0.14,
+          "end": 0.259
+        },
+        {
+          "id": "w1",
+          "text": "I",
+          "start": 0.419,
+          "end": 0.439
+        },
+        {
+          "id": "w2",
+          "text": "have",
+          "start": 0.459,
+          "end": 0.56
+        },
+        {
+          "id": "w3",
+          "text": "the",
+          "start": 0.579,
+          "end": 0.699
+        },
+        {
+          "id": "w4",
+          "text": "name",
+          "start": 0.719,
+          "end": 0.959
+        },
+        {
+          "id": "w5",
+          "text": "for",
+          "start": 0.979,
+          "end": 1.1
+        },
+        {
+          "id": "w6",
+          "text": "the",
+          "start": 1.12,
+          "end": 1.199
+        },
+        {
+          "id": "w7",
+          "text": "order?",
+          "start": 1.259,
+          "end": 1.579
+        }
+      ]
+    },
+    {
+      "n": 8,
+      "id": "line08",
+      "speaker": "T",
+      "src": ".media/audio/voice/line08.wav",
+      "dur": 1.097143,
+      "start": 40.9,
+      "end": 42,
+      "words": [
+        {
+          "id": "w0",
+          "text": "Thomas",
+          "start": 0.099,
+          "end": 0.519
+        },
+        {
+          "id": "w1",
+          "text": "Milton.",
+          "start": 0.519,
+          "end": 0.899
+        }
+      ]
+    },
+    {
+      "n": 9,
+      "id": "line09",
+      "speaker": "F",
+      "src": ".media/audio/voice/line09.wav",
+      "dur": 17.084082,
+      "start": 42.6,
+      "end": 59.68,
+      "words": [
+        {
+          "id": "w0",
+          "text": "Thank",
+          "start": 0.159,
+          "end": 0.319
+        },
+        {
+          "id": "w1",
+          "text": "you,",
+          "start": 0.379,
+          "end": 0.439
+        },
+        {
+          "id": "w2",
+          "text": "Thomas.",
+          "start": 0.539,
+          "end": 0.939
+        },
+        {
+          "id": "w3",
+          "text": "Your",
+          "start": 1.259,
+          "end": 1.399
+        },
+        {
+          "id": "w4",
+          "text": "order",
+          "start": 1.519,
+          "end": 1.759
+        },
+        {
+          "id": "w5",
+          "text": "includes",
+          "start": 1.819,
+          "end": 2.299
+        },
+        {
+          "id": "w6",
+          "text": "one",
+          "start": 2.379,
+          "end": 2.519
+        },
+        {
+          "id": "w7",
+          "text": "Gobi",
+          "start": 2.619,
+          "end": 2.879
+        },
+        {
+          "id": "w8",
+          "text": "Manchurian,",
+          "start": 2.919,
+          "end": 3.599
+        },
+        {
+          "id": "w9",
+          "text": "one",
+          "start": 3.959,
+          "end": 4.119
+        },
+        {
+          "id": "w10",
+          "text": "Samosa,",
+          "start": 4.219,
+          "end": 4.739
+        },
+        {
+          "id": "w11",
+          "text": "one",
+          "start": 5.159,
+          "end": 5.319
+        },
+        {
+          "id": "w12",
+          "text": "Paneer",
+          "start": 5.44,
+          "end": 5.739
+        },
+        {
+          "id": "w13",
+          "text": "Tikka",
+          "start": 5.839,
+          "end": 6.059
+        },
+        {
+          "id": "w14",
+          "text": "Masala",
+          "start": 6.119,
+          "end": 6.599
+        },
+        {
+          "id": "w15",
+          "text": "and",
+          "start": 6.779,
+          "end": 6.879
+        },
+        {
+          "id": "w16",
+          "text": "one",
+          "start": 7,
+          "end": 7.159
+        },
+        {
+          "id": "w17",
+          "text": "Veg",
+          "start": 7.279,
+          "end": 7.48
+        },
+        {
+          "id": "w18",
+          "text": "Biriyani.",
+          "start": 7.559,
+          "end": 8.119
+        },
+        {
+          "id": "w19",
+          "text": "Your",
+          "start": 8.579,
+          "end": 8.699
+        },
+        {
+          "id": "w20",
+          "text": "total",
+          "start": 8.819,
+          "end": 9.059
+        },
+        {
+          "id": "w21",
+          "text": "is",
+          "start": 9.139,
+          "end": 9.239
+        },
+        {
+          "id": "w22",
+          "text": "forty-four",
+          "start": 9.359,
+          "end": 9.799
+        },
+        {
+          "id": "w23",
+          "text": "dollars",
+          "start": 9.88,
+          "end": 10.219
+        },
+        {
+          "id": "w24",
+          "text": "and",
+          "start": 10.26,
+          "end": 10.399
+        },
+        {
+          "id": "w25",
+          "text": "ninety-six",
+          "start": 10.5,
+          "end": 11.059
+        },
+        {
+          "id": "w26",
+          "text": "cents.",
+          "start": 11.119,
+          "end": 11.5
+        },
+        {
+          "id": "w27",
+          "text": "Your",
+          "start": 12,
+          "end": 12.099
+        },
+        {
+          "id": "w28",
+          "text": "pickup",
+          "start": 12.199,
+          "end": 12.5
+        },
+        {
+          "id": "w29",
+          "text": "order",
+          "start": 12.579,
+          "end": 12.839
+        },
+        {
+          "id": "w30",
+          "text": "will",
+          "start": 12.88,
+          "end": 13
+        },
+        {
+          "id": "w31",
+          "text": "be",
+          "start": 13.059,
+          "end": 13.179
+        },
+        {
+          "id": "w32",
+          "text": "ready",
+          "start": 13.239,
+          "end": 13.479
+        },
+        {
+          "id": "w33",
+          "text": "in",
+          "start": 13.519,
+          "end": 13.659
+        },
+        {
+          "id": "w34",
+          "text": "twenty",
+          "start": 13.719,
+          "end": 14.099
+        },
+        {
+          "id": "w35",
+          "text": "to",
+          "start": 14.139,
+          "end": 14.239
+        },
+        {
+          "id": "w36",
+          "text": "twenty-five",
+          "start": 14.279,
+          "end": 14.819
+        },
+        {
+          "id": "w37",
+          "text": "minutes.",
+          "start": 14.88,
+          "end": 15.299
+        },
+        {
+          "id": "w38",
+          "text": "Is",
+          "start": 15.839,
+          "end": 15.899
+        },
+        {
+          "id": "w39",
+          "text": "everything",
+          "start": 15.979,
+          "end": 16.28
+        },
+        {
+          "id": "w40",
+          "text": "correct?",
+          "start": 16.379,
+          "end": 16.839
+        }
+      ]
+    },
+    {
+      "n": 10,
+      "id": "line10",
+      "speaker": "T",
+      "src": ".media/audio/voice/line10.wav",
+      "dur": 2.063673,
+      "start": 60.68,
+      "end": 62.74,
+      "words": [
+        {
+          "id": "w0",
+          "text": "Yes,",
+          "start": 0.159,
+          "end": 0.539
+        },
+        {
+          "id": "w1",
+          "text": "everything",
+          "start": 0.819,
+          "end": 1.159
+        },
+        {
+          "id": "w2",
+          "text": "is",
+          "start": 1.199,
+          "end": 1.299
+        },
+        {
+          "id": "w3",
+          "text": "correct.",
+          "start": 1.379,
+          "end": 1.759
+        }
+      ]
+    },
+    {
+      "n": 11,
+      "id": "line11",
+      "speaker": "F",
+      "src": ".media/audio/voice/line11.wav",
+      "dur": 4.884898,
+      "start": 63.34,
+      "end": 68.22,
+      "words": [
+        {
+          "id": "w0",
+          "text": "Perfect,",
+          "start": 0.14,
+          "end": 0.479
+        },
+        {
+          "id": "w1",
+          "text": "Thomas.",
+          "start": 0.579,
+          "end": 1.039
+        },
+        {
+          "id": "w2",
+          "text": "Your",
+          "start": 1.519,
+          "end": 1.659
+        },
+        {
+          "id": "w3",
+          "text": "order",
+          "start": 1.74,
+          "end": 1.959
+        },
+        {
+          "id": "w4",
+          "text": "is",
+          "start": 2.019,
+          "end": 2.119
+        },
+        {
+          "id": "w5",
+          "text": "confirmed.",
+          "start": 2.18,
+          "end": 2.799
+        },
+        {
+          "id": "w6",
+          "text": "Do",
+          "start": 3.22,
+          "end": 3.279
+        },
+        {
+          "id": "w7",
+          "text": "you",
+          "start": 3.319,
+          "end": 3.359
+        },
+        {
+          "id": "w8",
+          "text": "need",
+          "start": 3.439,
+          "end": 3.599
+        },
+        {
+          "id": "w9",
+          "text": "anything",
+          "start": 3.659,
+          "end": 3.979
+        },
+        {
+          "id": "w10",
+          "text": "else",
+          "start": 4.019,
+          "end": 4.199
+        },
+        {
+          "id": "w11",
+          "text": "from",
+          "start": 4.259,
+          "end": 4.38
+        },
+        {
+          "id": "w12",
+          "text": "me?",
+          "start": 4.42,
+          "end": 4.599
+        }
+      ]
+    },
+    {
+      "n": 12,
+      "id": "line12",
+      "speaker": "T",
+      "src": ".media/audio/voice/line12.wav",
+      "dur": 0.914286,
+      "start": 69.22,
+      "end": 70.13,
+      "words": [
+        {
+          "id": "w0",
+          "text": "No.",
+          "start": 0.299,
+          "end": 0.599
+        }
+      ]
+    },
+    {
+      "n": 13,
+      "id": "line13",
+      "speaker": "F",
+      "src": ".media/audio/voice/line13.wav",
+      "dur": 4.284082,
+      "start": 70.73,
+      "end": 75.01,
+      "words": [
+        {
+          "id": "w0",
+          "text": "Thank",
+          "start": 0.099,
+          "end": 0.3
+        },
+        {
+          "id": "w1",
+          "text": "you",
+          "start": 0.34,
+          "end": 0.439
+        },
+        {
+          "id": "w2",
+          "text": "for",
+          "start": 0.479,
+          "end": 0.62
+        },
+        {
+          "id": "w3",
+          "text": "choosing",
+          "start": 0.659,
+          "end": 1.039
+        },
+        {
+          "id": "w4",
+          "text": "Cake",
+          "start": 1.079,
+          "end": 1.279
+        },
+        {
+          "id": "w5",
+          "text": "World",
+          "start": 1.339,
+          "end": 1.559
+        },
+        {
+          "id": "w6",
+          "text": "Eatery,",
+          "start": 1.679,
+          "end": 2.079
+        },
+        {
+          "id": "w7",
+          "text": "Alpharetta.",
+          "start": 2.379,
+          "end": 3.019
+        },
+        {
+          "id": "w8",
+          "text": "Goodbye!",
+          "start": 3.519,
+          "end": 4.019
+        }
+      ]
+    }
+  ],
+  "cues": {
+    "ring_start": 0.3,
+    "accept_tap": 4.6,
+    "items": [
+      {
+        "name": "Gobi Manchurian",
+        "t": 23.76
+      },
+      {
+        "name": "Samosa",
+        "t": 25.3
+      },
+      {
+        "name": "Paneer Tikka Masala",
+        "t": 27.6
+      },
+      {
+        "name": "Veg Biriyani",
+        "t": 29.64
+      }
+    ],
+    "recap_items": [
+      {
+        "name": "Gobi Manchurian",
+        "t": 45.52
+      },
+      {
+        "name": "Samosa",
+        "t": 46.82
+      },
+      {
+        "name": "Paneer Tikka Masala",
+        "t": 48.72
+      },
+      {
+        "name": "Veg Biriyani",
+        "t": 50.16
+      }
+    ],
+    "total_countup": 51.96,
+    "total_done": 53.72,
+    "eta_pill": 56.32,
+    "confirm_stamp": 63.09,
+    "endcall_chip": 75.41,
+    "end_beep": 75.71,
+    "call_ended": 76.06
+  }
+}

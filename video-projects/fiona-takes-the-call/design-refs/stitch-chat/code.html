@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<title>Kerala Bistro - AI Assistant</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Work+Sans:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-container": "#666563",
+                    "primary-fixed-dim": "#ffb3b4",
+                    "secondary": "#5f5e5e",
+                    "error": "#ba1a1a",
+                    "on-primary-fixed-variant": "#920023",
+                    "surface-variant": "#e3e2e2",
+                    "surface-dim": "#dbdad9",
+                    "tertiary": "#4e4d4b",
+                    "on-primary-fixed": "#40000a",
+                    "surface-bright": "#fbf9f9",
+                    "inverse-on-surface": "#f2f0f0",
+                    "secondary-fixed-dim": "#c8c6c5",
+                    "error-container": "#ffdad6",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-fixed-variant": "#474746",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-high": "#e9e8e7",
+                    "secondary-container": "#e2dfde",
+                    "on-secondary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "surface-container-highest": "#e3e2e2",
+                    "primary-fixed": "#ffdad9",
+                    "on-tertiary-fixed-variant": "#474745",
+                    "secondary-fixed": "#e5e2e1",
+                    "on-tertiary-container": "#e6e3e0",
+                    "on-surface": "#1b1c1c",
+                    "surface-tint": "#ba1434",
+                    "surface": "#fbf9f9",
+                    "on-surface-variant": "#5b4040",
+                    "on-primary": "#ffffff",
+                    "inverse-surface": "#303031",
+                    "inverse-primary": "#ffb3b4",
+                    "outline-variant": "#e3bebd",
+                    "tertiary-fixed-dim": "#c8c6c3",
+                    "on-secondary-container": "#636262",
+                    "primary-container": "#c41e3a",
+                    "on-background": "#1b1c1c",
+                    "tertiary-fixed": "#e5e2df",
+                    "on-tertiary-fixed": "#1c1c1a",
+                    "on-error": "#ffffff",
+                    "surface-container-low": "#f5f3f3",
+                    "primary": "#9e0027",
+                    "outline": "#8f6f6f",
+                    "on-secondary-fixed": "#1c1b1b",
+                    "background": "#fbf9f9",
+                    "on-primary-container": "#ffdada",
+                    "surface-container": "#efeded"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "sm": "8px",
+                    "base": "4px",
+                    "margin-mobile": "16px",
+                    "xs": "4px",
+                    "xl": "32px",
+                    "md": "16px",
+                    "lg": "24px",
+                    "gutter-mobile": "12px"
+            },
+            "fontFamily": {
+                    "body-md": ["Work Sans"],
+                    "label-md": ["Work Sans"],
+                    "display-lg": ["Plus Jakarta Sans"],
+                    "headline-sm": ["Plus Jakarta Sans"],
+                    "body-lg": ["Work Sans"],
+                    "display-lg-mobile": ["Plus Jakarta Sans"],
+                    "headline-md": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "display-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "display-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .voice-wave-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            height: 40px;
+        }
+        .wave-bar {
+            width: 4px;
+            height: 8px;
+            background-color: #c41e3a;
+            border-radius: 2px;
+            animation: wave-animation 1.2s ease-in-out infinite;
+        }
+        .wave-bar:nth-child(2) { animation-delay: 0.1s; }
+        .wave-bar:nth-child(3) { animation-delay: 0.2s; }
+        .wave-bar:nth-child(4) { animation-delay: 0.3s; }
+        .wave-bar:nth-child(5) { animation-delay: 0.4s; }
+        @keyframes wave-animation {
+            0%, 100% { height: 8px; }
+            50% { height: 32px; }
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #e3e2e2;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-fixed-dim">
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky z-50 shadow-sm bg-surface dark:bg-surface-dim flex items-center justify-between px-margin-mobile h-16">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="A professional headshot of a friendly female customer service AI representative with a warm smile, wearing a subtle headset, set against a blurred modern bistro interior with warm wooden textures and soft lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPu7pmte-8TcUO6uoxYixT0DjsxZ8cRCWtuS0Cm40BE2S8raxOuhVAAFaAQspM9esylYGtCNnHaJb0ivqGl2ysT93MwHRm8pe2EhFiCjsM0DNw7mOjGXqeZ28MZ6PmuuiqNNhxx5SGY8zEKG9jKwrkW1QDStusrZRxMFMlIQbcHzTCmKi6GYiQE_RCmOnbHQ6ekYYVZ3llArqgaV18sEHi91z9KX1jsfhoIc3KElmaUV0-fYOTFuUo"/>
+</div>
+<h1 class="font-display-lg-mobile text-display-lg-mobile text-primary dark:text-primary-fixed-dim">Kerala Bistro</h1>
+</div>
+<button class="w-10 h-10 flex items-center justify-center rounded-full text-primary dark:text-primary-fixed-dim hover:bg-surface-container-low transition-colors active:scale-95 duration-150">
+<span class="material-symbols-outlined">search</span>
+</button>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex flex-col h-[calc(100vh-144px)] max-w-[1040px] mx-auto overflow-hidden">
+<!-- Active Call Header -->
+<section class="flex flex-col items-center py-lg px-margin-mobile bg-surface-container-lowest/50 border-b border-outline-variant">
+<div class="voice-wave-container mb-2">
+<div class="wave-bar"></div>
+<div class="wave-bar"></div>
+<div class="wave-bar"></div>
+<div class="wave-bar"></div>
+<div class="wave-bar"></div>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Fiona - AI Assistant</h2>
+<p class="font-label-md text-label-md text-secondary uppercase tracking-widest mt-1">Active Call • 02:14</p>
+</section>
+<!-- Transcription Feed -->
+<section class="flex-1 overflow-y-auto px-margin-mobile py-lg custom-scrollbar space-y-md" id="transcription-feed">
+<!-- Message Fiona -->
+<div class="flex flex-col items-start max-w-[85%]">
+<div class="bg-surface-container-high text-on-surface rounded-xl rounded-tl-none p-md shadow-sm">
+<p class="font-body-md text-body-md">Hi! Thank you for calling Cake World Eatery. What would you like to order today?</p>
+</div>
+<span class="font-label-md text-label-md text-secondary mt-1 ml-1">12:00 PM</span>
+</div>
+<!-- Message Thomas -->
+<div class="flex flex-col items-end ml-auto max-w-[85%]">
+<div class="bg-primary-container text-on-primary-container rounded-xl rounded-tr-none p-md shadow-sm">
+<p class="font-body-md text-body-md">I’d like to place a pickup order.</p>
+</div>
+<span class="font-label-md text-label-md text-secondary mt-1 mr-1">12:00 PM</span>
+</div>
+<!-- Message Fiona -->
+<div class="flex flex-col items-start max-w-[85%]">
+<div class="bg-surface-container-high text-on-surface rounded-xl rounded-tl-none p-md shadow-sm">
+<p class="font-body-md text-body-md">Great! Is this a regular pickup or a cake order?</p>
+</div>
+<span class="font-label-md text-label-md text-secondary mt-1 ml-1">12:00 PM</span>
+</div>
+<!-- Message Thomas -->
+<div class="flex flex-col items-end ml-auto max-w-[85%]">
+<div class="bg-primary-container text-on-primary-container rounded-xl rounded-tr-none p-md shadow-sm">
+<p class="font-body-md text-body-md">A regular pickup. I’d like one Gobi Manchurian, one Samosa, one Paneer Tikka Masala and one Veg Biriyani.</p>
+</div>
+<span class="font-label-md text-label-md text-secondary mt-1 mr-1">12:01 PM</span>
+</div>
+<!-- Message Fiona -->
+<div class="flex flex-col items-start max-w-[85%]">
+<div class="bg-surface-container-high text-on-surface rounded-xl rounded-tl-none p-md shadow-sm">
+<p class="font-body-md text-body-md">Certainly. Would you like to add or modify anything else?</p>
+</div>
+<span class="font-label-md text-label-md text-secondary mt-1 ml-1">12:01 PM</span>
+</div>
+<!-- Message Thomas -->
+<div class="flex flex-col items-end ml-auto max-w-[85%]">
+<div class="bg-primary-container text-on-primary-container rounded-xl rounded-tr-none p-md shadow-sm">
+<p class="font-body-md text-body-md">No, that’s everything.</p>
+</div>
+<span class="font-label-md text-label-md text-secondary mt-1 mr-1">12:01 PM</span>
+</div>
+<!-- Message Fiona -->
+<div class="flex flex-col items-start max-w-[85%]">
+<div class="bg-surface-container-high text-on-surface rounded-xl rounded-tl-none p-md shadow-sm">
+<p class="font-body-md text-body-md">May I have the name for the order?</p>
+</div>
+<span class="font-label-md text-label-md text-secondary mt-1 ml-1">12:01 PM</span>
+</div>
+<!-- Message Thomas -->
+<div class="flex flex-col items-end ml-auto max-w-[85%]">
+<div class="bg-primary-container text-on-primary-container rounded-xl rounded-tr-none p-md shadow-sm">
+<p class="font-body-md text-body-md">Thomas Milton.</p>
+</div>
+<span class="font-label-md text-label-md text-secondary mt-1 mr-1">12:02 PM</span>
+</div>
+<!-- Message Fiona -->
+<div class="flex flex-col items-start max-w-[85%]">
+<div class="bg-surface-container-high text-on-surface rounded-xl rounded-tl-none p-md shadow-sm">
+<p class="font-body-md text-body-md">Thank you, Thomas. Your order includes one Gobi Manchurian, one Samosa, one Paneer Tikka Masala and one Veg Biriyani. Your total is $44.96. Your pickup order will be ready in 20-25 mins. Is everything correct?</p>
+</div>
+<span class="font-label-md text-label-md text-secondary mt-1 ml-1">12:02 PM</span>
+</div>
+<!-- Message Thomas -->
+<div class="flex flex-col items-end ml-auto max-w-[85%]">
+<div class="bg-primary-container text-on-primary-container rounded-xl rounded-tr-none p-md shadow-sm">
+<p class="font-body-md text-body-md">Yes, everything is correct.</p>
+</div>
+<span class="font-label-md text-label-md text-secondary mt-1 mr-1">12:02 PM</span>
+</div>
+<!-- Message Fiona -->
+<div class="flex flex-col items-start max-w-[85%]">
+<div class="bg-surface-container-high text-on-surface rounded-xl rounded-tl-none p-md shadow-sm">
+<p class="font-body-md text-body-md">Perfect, Thomas. Your order is confirmed. Do you need anything else from me?</p>
+</div>
+<span class="font-label-md text-label-md text-secondary mt-1 ml-1">12:02 PM</span>
+</div>
+<!-- Message Thomas -->
+<div class="flex flex-col items-end ml-auto max-w-[85%]">
+<div class="bg-primary-container text-on-primary-container rounded-xl rounded-tr-none p-md shadow-sm">
+<p class="font-body-md text-body-md">No.</p>
+</div>
+<span class="font-label-md text-label-md text-secondary mt-1 mr-1">12:02 PM</span>
+</div>
+<!-- Message Fiona -->
+<div class="flex flex-col items-start max-w-[85%] pb-8">
+<div class="bg-surface-container-high text-on-surface rounded-xl rounded-tl-none p-md shadow-sm">
+<p class="font-body-md text-body-md">Thank you for choosing Cake World Eatery, Alpharetta. Goodbye!</p>
+</div>
+<span class="font-label-md text-label-md text-secondary mt-1 ml-1">12:03 PM</span>
+</div>
+</section>
+<!-- Call Controls Overlay -->
+<section class="bg-surface py-md px-margin-mobile shadow-[0_-8px_30px_rgba(0,0,0,0.05)] border-t border-outline-variant/30">
+<div class="flex items-center justify-around gap-lg">
+<!-- Mute -->
+<button class="flex flex-col items-center gap-1 group active:scale-95 transition-transform">
+<div class="w-12 h-12 rounded-full border border-outline flex items-center justify-center text-secondary group-hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined">mic_off</span>
+</div>
+<span class="font-label-md text-label-md text-secondary">Mute</span>
+</button>
+<!-- End Call -->
+<button class="flex flex-col items-center gap-1 active:scale-90 transition-transform">
+<div class="w-16 h-16 rounded-full bg-error text-on-error flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined !text-[32px]">call_end</span>
+</div>
+<span class="font-label-md text-label-md text-error font-semibold">End</span>
+</button>
+<!-- Speaker -->
+<button class="flex flex-col items-center gap-1 group active:scale-95 transition-transform">
+<div class="w-12 h-12 rounded-full border border-outline flex items-center justify-center text-secondary group-hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined">volume_up</span>
+</div>
+<span class="font-label-md text-label-md text-secondary">Speaker</span>
+</button>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 shadow-md bg-surface dark:bg-inverse-surface flex justify-around items-center h-20 px-2 pb-safe">
+<button class="flex flex-col items-center justify-center text-secondary dark:text-secondary-fixed-dim hover:bg-surface-container-highest transition-all active:scale-90 duration-200">
+<span class="material-symbols-outlined">chat_bubble</span>
+<span class="font-label-md text-label-md">Inbox</span>
+</button>
+<button class="flex flex-col items-center justify-center text-secondary dark:text-secondary-fixed-dim hover:bg-surface-container-highest transition-all active:scale-90 duration-200">
+<span class="material-symbols-outlined">explore</span>
+<span class="font-label-md text-label-md">Discover</span>
+</button>
+<button class="flex flex-col items-center justify-center text-secondary dark:text-secondary-fixed-dim hover:bg-surface-container-highest transition-all active:scale-90 duration-200">
+<span class="material-symbols-outlined">restaurant_menu</span>
+<span class="font-label-md text-label-md">Menu</span>
+</button>
+<button class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-4 py-1 active:scale-90 duration-200">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="font-label-md text-label-md">Profile</span>
+</button>
+</nav>
+<script>
+        // Ensure transcription feed stays scrolled to bottom
+        const feed = document.getElementById('transcription-feed');
+        feed.scrollTop = feed.scrollHeight;
+
+        // Subtle micro-interaction: update current time or simulate wave intensity
+        setInterval(() => {
+            const waves = document.querySelectorAll('.wave-bar');
+            waves.forEach(bar => {
+                const randomScale = 0.5 + Math.random() * 1.5;
+                bar.style.transform = `scaleY(${randomScale})`;
+            });
+        }, 150);
+    </script>
+</body></html>

@@ -1,0 +1,110 @@
+[
+  {
+    "id": "w0",
+    "text": "A",
+    "start": 0.259,
+    "end": 0.379
+  },
+  {
+    "id": "w1",
+    "text": "regular",
+    "start": 0.399,
+    "end": 0.759
+  },
+  {
+    "id": "w2",
+    "text": "pickup.",
+    "start": 0.859,
+    "end": 1.279
+  },
+  {
+    "id": "w3",
+    "text": "I'd",
+    "start": 1.779,
+    "end": 1.959
+  },
+  {
+    "id": "w4",
+    "text": "like",
+    "start": 2.019,
+    "end": 2.22
+  },
+  {
+    "id": "w5",
+    "text": "one",
+    "start": 2.339,
+    "end": 2.559
+  },
+  {
+    "id": "w6",
+    "text": "Gobi",
+    "start": 2.679,
+    "end": 2.939
+  },
+  {
+    "id": "w7",
+    "text": "Manchurian,",
+    "start": 3,
+    "end": 3.699
+  },
+  {
+    "id": "w8",
+    "text": "one",
+    "start": 4.259,
+    "end": 4.44
+  },
+  {
+    "id": "w9",
+    "text": "Samosa,",
+    "start": 4.539,
+    "end": 5.119
+  },
+  {
+    "id": "w10",
+    "text": "one",
+    "start": 5.719,
+    "end": 5.9
+  },
+  {
+    "id": "w11",
+    "text": "Paneer",
+    "start": 6,
+    "end": 6.379
+  },
+  {
+    "id": "w12",
+    "text": "Tikka",
+    "start": 6.519,
+    "end": 6.779
+  },
+  {
+    "id": "w13",
+    "text": "Masala",
+    "start": 6.839,
+    "end": 7.44
+  },
+  {
+    "id": "w14",
+    "text": "and",
+    "start": 7.919,
+    "end": 8.06
+  },
+  {
+    "id": "w15",
+    "text": "one",
+    "start": 8.22,
+    "end": 8.359
+  },
+  {
+    "id": "w16",
+    "text": "Veg",
+    "start": 8.479,
+    "end": 8.779
+  },
+  {
+    "id": "w17",
+    "text": "Biriyani.",
+    "start": 8.88,
+    "end": 9.519
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "w0",
+    "text": "Certainly.",
+    "start": 0.259,
+    "end": 0.819
+  },
+  {
+    "id": "w1",
+    "text": "Would",
+    "start": 1.179,
+    "end": 1.319
+  },
+  {
+    "id": "w2",
+    "text": "you",
+    "start": 1.36,
+    "end": 1.439
+  },
+  {
+    "id": "w3",
+    "text": "like",
+    "start": 1.5,
+    "end": 1.659
+  },
+  {
+    "id": "w4",
+    "text": "to",
+    "start": 1.679,
+    "end": 1.779
+  },
+  {
+    "id": "w5",
+    "text": "add",
+    "start": 1.899,
+    "end": 2.059
+  },
+  {
+    "id": "w6",
+    "text": "or",
+    "start": 2.119,
+    "end": 2.159
+  },
+  {
+    "id": "w7",
+    "text": "modify",
+    "start": 2.259,
+    "end": 2.659
+  },
+  {
+    "id": "w8",
+    "text": "anything",
+    "start": 2.7,
+    "end": 3.039
+  },
+  {
+    "id": "w9",
+    "text": "else?",
+    "start": 3.079,
+    "end": 3.379
+  }
+]

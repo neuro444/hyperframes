@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head><meta charset="UTF-8"></head>
+  <body>
+    <template>
+      <style>
+        @font-face { font-family: "Work Sans"; font-style: normal; font-weight: 100 900; src: url("assets/fonts/work-sans-var.woff2") format("woff2"); }
+        @font-face { font-family: "Plus Jakarta Sans"; font-style: normal; font-weight: 100 900; src: url("assets/fonts/plus-jakarta-sans-var.woff2") format("woff2"); }
+        #root { position: absolute; inset: 0; width: 1080px; height: 1920px; background: #E9E5E2; overflow: hidden; font-family: "Work Sans", "Helvetica Neue", sans-serif; color: #1B1C1C; }
+        .clip { position: absolute; inset: 0; }
+        .device { position: absolute; left: 88px; top: 32px; width: 904px; height: 1856px; border: 6px solid #8A8378; border-radius: 96px; padding: 18px; background: #050505; box-sizing: border-box; box-shadow: 0 30px 80px rgba(0,0,0,0.28); }
+        .sidebtn { position: absolute; background: #7E786D; border-radius: 4px; }
+        .sb-power { right: -13px; top: 470px; width: 7px; height: 150px; }
+        .sb-v1 { left: -13px; top: 380px; width: 7px; height: 90px; }
+        .sb-v2 { left: -13px; top: 490px; width: 7px; height: 90px; }
+        .screen { position: relative; width: 100%; height: 100%; border-radius: 80px; overflow: hidden; background: #FBF9F9; display: flex; flex-direction: column; align-items: center; }
+        .island { position: absolute; top: 22px; left: 50%; transform: translateX(-50%); width: 236px; height: 62px; border-radius: 40px; background: #000; z-index: 6; }
+        .statusbar { position: absolute; top: 30px; left: 64px; right: 64px; display: flex; justify-content: space-between; align-items: center; z-index: 5; font-size: 30px; font-weight: 600; }
+        .sig { display: flex; gap: 5px; align-items: flex-end; }
+        .sig i { display: block; width: 7px; background: #1B1C1C; border-radius: 2px; }
+        .batt { display: inline-block; width: 50px; height: 24px; border: 3px solid rgba(27,28,28,0.4); border-radius: 8px; position: relative; margin-left: 12px; vertical-align: middle; }
+        .batt i { position: absolute; inset: 3px; right: 12px; background: #1B1C1C; border-radius: 3px; display: block; }
+        .right-cluster { display: flex; align-items: center; }
+        .serif { font-family: "Playfair Display", serif; }
+        .glow { position: absolute; top: 240px; left: 50%; transform: translateX(-50%); width: 700px; height: 700px; border-radius: 50%; background: radial-gradient(closest-side, rgba(46,125,50,0.16), rgba(46,125,50,0)); opacity: 0; }
+        .checkwrap { margin-top: 300px; position: relative; width: 240px; height: 240px; }
+        .checkwrap svg { width: 240px; height: 240px; transform: rotate(-90deg); }
+        .title { margin-top: 52px; font-size: 84px; font-weight: 700; }
+        .thanks { margin-top: 24px; font-size: 46px; font-weight: 700; }
+        .flourish { width: 420px; height: 2px; background: rgba(158,0,39,0.5); margin: 44px 0 0; transform-origin: center; position: relative; }
+        .flourish i { position: absolute; left: 50%; top: -9px; transform: translateX(-50%); width: 18px; height: 18px; border: 2px solid rgba(158,0,39,0.6); border-radius: 50%; background: #FBF9F9; display: block; box-sizing: border-box; }
+        .pill { margin-top: 44px; width: 560px; height: 96px; border-radius: 100px; background: #FFFFFF; border: 3px solid #2E7D32; box-sizing: border-box; color: #2E7D32; display: flex; align-items: center; justify-content: center; gap: 16px; font-size: 34px; font-weight: 700; }
+        .pill svg { width: 40px; height: 40px; }
+        .brandline { margin-top: 40px; font-size: 31px; color: #5F5E5E; }
+        .chat { position: absolute; left: 52px; right: 52px; bottom: 120px; display: flex; flex-direction: column; }
+        .stamp { font-size: 24px; letter-spacing: 0.08em; color: #8C8A88; margin: 0 0 14px; }
+        .stamp.l { align-self: flex-start; } .stamp.r { align-self: flex-end; }
+        .bubble { max-width: 82%; padding: 26px 32px; font-size: 34px; line-height: 1.32; border-radius: 24px; margin-bottom: 22px; }
+        .fiona { align-self: flex-start; background: #EFEDED; color: #1B1C1C; border-bottom-left-radius: 4px; }
+        .thomas { align-self: flex-end; background: #BA1434; color: #FFFFFF; border-bottom-right-radius: 4px; }
+      </style>
+      <div data-hf-id="hf-lwqd" id="root" data-composition-id="06-confirmed" data-width="1080" data-height="1920">
+        <section data-hf-id="hf-dcur" id="scene-06" class="clip" data-start="0" data-duration="8.54" data-track-index="1">
+          <div data-hf-id="hf-l1ou" class="device">
+            <div data-hf-id="hf-354e" class="sidebtn sb-power"></div><div data-hf-id="hf-ltr0" class="sidebtn sb-v1"></div><div data-hf-id="hf-wp8n" class="sidebtn sb-v2"></div>
+            <div data-hf-id="hf-cdmk" class="screen">
+              <div data-hf-id="hf-sz55" class="statusbar"><span data-hf-id="hf-zwmt">9:41</span><span data-hf-id="hf-mpb8" class="right-cluster"><span data-hf-id="hf-zh8g" class="sig"><i data-hf-id="hf-vg97" style="height:12px"></i><i data-hf-id="hf-irsm" style="height:17px"></i><i data-hf-id="hf-ht8a" style="height:22px"></i><i data-hf-id="hf-snef" style="height:27px"></i></span><span data-hf-id="hf-7g6e" class="batt"><i data-hf-id="hf-wt6k"></i></span></span></div>
+              <div data-hf-id="hf-o18g" class="glow" id="cf-glow"></div>
+              <div data-hf-id="hf-zcbq" class="checkwrap" id="cf-check">
+                <svg data-hf-id="hf-8d99" viewBox="0 0 240 240" fill="none">
+                  <circle data-hf-id="hf-ab0c" id="cf-ring" cx="120" cy="120" r="104" stroke="#2E7D32" stroke-width="11" stroke-linecap="round" />
+                  <path data-hf-id="hf-pj7s" id="cf-tick" d="M74 130l32 32 62-76" stroke="#2E7D32" stroke-width="13" stroke-linecap="round" stroke-linejoin="round" transform="rotate(90 120 120)" />
+                </svg>
+              </div>
+              <div data-hf-id="hf-dd4q" class="title serif" id="cf-title">Order Confirmed</div>
+              <div data-hf-id="hf-6afn" class="thanks serif" id="cf-thanks">Thank you, Thomas!</div>
+              <div data-hf-id="hf-bk22" class="flourish" id="cf-flourish"><i data-hf-id="hf-zeb8"></i></div>
+              <div data-hf-id="hf-pa3o" class="pill" id="cf-pill"><svg data-hf-id="hf-f5uu" viewBox="0 0 24 24" fill="none" stroke="#2E7D32" stroke-width="2" stroke-linecap="round"><circle data-hf-id="hf-1iwn" cx="12" cy="12" r="9" /><path data-hf-id="hf-8ge0" d="M12 7v5l3.5 2" /></svg>Pickup in 20–25 minutes</div>
+              <div data-hf-id="hf-4bkv" class="brandline" id="cf-brand">Cake World Eatery · Alpharetta</div>
+              <div data-hf-id="hf-vshe" class="chat">
+                <div data-hf-id="hf-sfpp" class="bubble thomas" id="cf-b10"><span data-hf-id="hf-rex9" class="wt" data-line="line10"></span></div>
+                <div data-hf-id="hf-a07s" class="stamp r" id="cf-s10">THOMAS · 12:02 PM</div>
+                <div data-hf-id="hf-3q1l" class="bubble fiona" id="cf-b11"><span data-hf-id="hf-qn9g" class="wt" data-line="line11"></span></div>
+                <div data-hf-id="hf-kjzt" class="stamp l" id="cf-s11">FIONA · 12:03 PM</div>
+              </div>
+              <div data-hf-id="hf-7sfr" class="island"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <script>
+        window.__timelines = window.__timelines || {};
+        (function () {
+          const WORDS = /*__WORDS__*/ {"line10":{"words":[{"text":"Yes,","start":0.159,"end":0.539},{"text":"everything","start":0.819,"end":1.159},{"text":"is","start":1.199,"end":1.299},{"text":"correct.","start":1.379,"end":1.759}]},"line11":{"words":[{"text":"Perfect,","start":0.14,"end":0.479},{"text":"Thomas.","start":0.579,"end":1.039},{"text":"Your","start":1.519,"end":1.659},{"text":"order","start":1.74,"end":1.959},{"text":"is","start":2.019,"end":2.119},{"text":"confirmed.","start":2.18,"end":2.799},{"text":"Do","start":3.22,"end":3.279},{"text":"you","start":3.319,"end":3.359},{"text":"need","start":3.439,"end":3.599},{"text":"anything","start":3.659,"end":3.979},{"text":"else","start":4.019,"end":4.199},{"text":"from","start":4.259,"end":4.38},{"text":"me?","start":4.42,"end":4.599}]}};
+          const tl = gsap.timeline({ paused: true });
+          function buildLine(lineId, startLocal) {
+            const el = document.querySelector('.wt[data-line="' + lineId + '"]');
+            if (!el || !WORDS || !WORDS[lineId]) return;
+            for (const w of WORDS[lineId].words) {
+              const s = document.createElement("span");
+              s.textContent = w.text + " ";
+              s.style.opacity = "0.15";
+              el.appendChild(s);
+              tl.set(s, { opacity: 1 }, Math.max(0.01, startLocal + w.start));
+            }
+          }
+          // captions
+          tl.fromTo("#cf-b10", { opacity: 0, y: 30, scale: 0.97 }, { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "back.out(1.3)" }, 0.15);
+          tl.fromTo("#cf-s10", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 2.1);
+          buildLine("line10", 0.3);
+          tl.fromTo("#cf-b11", { opacity: 0, y: 30, scale: 0.97 }, { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "back.out(1.3)" }, 2.81);
+          tl.fromTo("#cf-s11", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 7.6);
+          buildLine("line11", 2.96);
+          // confirmation build — ring draws, tick draws, then the words
+          const ring = document.getElementById("cf-ring");
+          const tick = document.getElementById("cf-tick");
+          const ringLen = ring.getTotalLength();
+          const tickLen = tick.getTotalLength();
+          ring.style.strokeDasharray = String(ringLen);
+          tick.style.strokeDasharray = String(tickLen);
+          tl.fromTo("#cf-check", { opacity: 0, scale: 0.85 }, { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(1.6)" }, 2.71);
+          tl.fromTo(ring, { strokeDashoffset: ringLen }, { strokeDashoffset: 0, duration: 0.75, ease: "power2.inOut" }, 2.71);
+          tl.fromTo(tick, { strokeDashoffset: tickLen }, { strokeDashoffset: 0, duration: 0.45, ease: "power2.out" }, 3.36);
+          tl.fromTo("#cf-glow", { opacity: 0 }, { opacity: 1, duration: 0.7, ease: "sine.out" }, 3.1);
+          tl.fromTo("#cf-title", { opacity: 0, y: 30, scale: 0.94 }, { opacity: 1, y: 0, scale: 1, duration: 0.55, ease: "back.out(1.5)" }, 3.5);
+          tl.fromTo("#cf-thanks", { opacity: 0, y: 22 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, 3.8);
+          tl.fromTo("#cf-flourish", { scaleX: 0 }, { scaleX: 1, duration: 0.5, ease: "power2.out" }, 4.1);
+          tl.fromTo("#cf-pill", { opacity: 0, scale: 0.9, y: 16 }, { opacity: 1, scale: 1, y: 0, duration: 0.5, ease: "back.out(1.7)" }, 4.35);
+          tl.fromTo("#cf-brand", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 4.7);
+          window.__timelines["06-confirmed"] = tl;
+        })();
+      </script>
+    </template>
+  </body>
+</html>
