@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+  <head><meta charset="UTF-8"></head>
+  <body>
+    <template>
+      <style>
+        @font-face { font-family: "Work Sans"; font-style: normal; font-weight: 100 900; src: url("assets/fonts/work-sans-var.woff2") format("woff2"); }
+        @font-face { font-family: "Plus Jakarta Sans"; font-style: normal; font-weight: 100 900; src: url("assets/fonts/plus-jakarta-sans-var.woff2") format("woff2"); }
+        #root { position: absolute; inset: 0; width: 1080px; height: 1920px; background: #E9E5E2; overflow: hidden; font-family: "Work Sans", "Helvetica Neue", sans-serif; color: #1B1C1C; }
+        .clip { position: absolute; inset: 0; }
+        .device { position: absolute; left: 88px; top: 32px; width: 904px; height: 1856px; border: 6px solid #8A8378; border-radius: 96px; padding: 18px; background: #050505; box-sizing: border-box; box-shadow: 0 30px 80px rgba(0,0,0,0.28); }
+        .sidebtn { position: absolute; background: #7E786D; border-radius: 4px; }
+        .sb-power { right: -13px; top: 470px; width: 7px; height: 150px; }
+        .sb-v1 { left: -13px; top: 380px; width: 7px; height: 90px; }
+        .sb-v2 { left: -13px; top: 490px; width: 7px; height: 90px; }
+        .screen { position: relative; width: 100%; height: 100%; border-radius: 80px; overflow: hidden; background: #FBF9F9; }
+        .island { position: absolute; top: 22px; left: 50%; transform: translateX(-50%); width: 236px; height: 62px; border-radius: 40px; background: #000; z-index: 12; }
+        .statusbar { position: absolute; top: 30px; left: 64px; right: 64px; display: flex; justify-content: space-between; align-items: center; z-index: 11; font-size: 30px; font-weight: 600; }
+        .sig { display: flex; gap: 5px; align-items: flex-end; }
+        .sig i { display: block; width: 7px; background: #1B1C1C; border-radius: 2px; }
+        .batt { display: inline-block; width: 50px; height: 24px; border: 3px solid rgba(27,28,28,0.4); border-radius: 8px; position: relative; margin-left: 12px; vertical-align: middle; }
+        .batt i { position: absolute; inset: 3px; right: 12px; background: #1B1C1C; border-radius: 3px; display: block; }
+        .right-cluster { display: flex; align-items: center; }
+        .head { font-family: "Plus Jakarta Sans", "Helvetica Neue", sans-serif; }
+        .mono { font-family: "JetBrains Mono", monospace; font-variant-numeric: tabular-nums; }
+        .callview { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; }
+        .brandbar { margin-top: 128px; width: 100%; padding: 0 56px; box-sizing: border-box; display: flex; align-items: center; gap: 24px; }
+        .logo-avatar { width: 84px; height: 84px; border-radius: 50%; background: #141414; display: grid; place-items: center; overflow: hidden; }
+        .logo-avatar img { width: 150%; max-width: none; height: auto; }
+        .brand { font-size: 42px; font-weight: 800; color: #9E0027; }
+        .callzone { margin-top: 42px; display: flex; flex-direction: column; align-items: center; }
+        .wave { display: flex; gap: 9px; align-items: center; height: 44px; }
+        .bar { width: 10px; height: 40px; border-radius: 5px; background: #BA1434; transform-origin: center; }
+        .callee { margin-top: 26px; font-size: 50px; font-weight: 700; }
+        .status { margin-top: 14px; font-size: 26px; font-weight: 600; letter-spacing: 0.12em; color: #8A8A8A; font-variant-numeric: tabular-nums; }
+        .divider { margin-top: 38px; width: 100%; height: 2px; background: #ECE9E8; }
+        .chat { width: 100%; box-sizing: border-box; padding: 42px 52px 0; display: flex; flex-direction: column; }
+        .stamp { font-size: 24px; letter-spacing: 0.08em; color: #8C8A88; margin: 0 0 16px; }
+        .stamp.l { align-self: flex-start; } .stamp.r { align-self: flex-end; }
+        .bubble { max-width: 78%; padding: 30px 34px; font-size: 38px; line-height: 1.35; border-radius: 24px; margin-bottom: 28px; }
+        .fiona { align-self: flex-start; background: #EFEDED; color: #1B1C1C; border-bottom-left-radius: 4px; }
+        .thomas { align-self: flex-end; background: #BA1434; color: #FFFFFF; border-bottom-right-radius: 4px; }
+        .orderview { position: absolute; inset: 0; background: #FBF9F9; z-index: 8; display: flex; flex-direction: column; }
+        .titlebar { margin-top: 140px; width: 100%; padding: 0 60px; box-sizing: border-box; display: flex; align-items: center; gap: 24px; }
+        .chev { font-size: 54px; color: #9E0027; font-weight: 700; line-height: 1; }
+        .title { font-size: 52px; font-weight: 800; }
+        .content { padding: 38px 60px 0; }
+        .customer { display: flex; align-items: center; gap: 30px; }
+        .avatar { width: 104px; height: 104px; border-radius: 50%; background: #EFEDED; display: grid; place-items: center; }
+        .avatar svg { width: 54px; height: 54px; }
+        .cust-label { font-size: 26px; color: #8A8A8A; font-weight: 600; letter-spacing: 0.06em; }
+        .cust-name { font-size: 48px; font-weight: 800; }
+        .hr { height: 2px; background: #ECE9E8; margin: 32px 0; }
+        .section-title { font-size: 40px; font-weight: 800; margin-bottom: 14px; }
+        .row { display: flex; justify-content: space-between; align-items: center; font-size: 36px; padding: 22px 0; border-bottom: 1px solid #EEEBEA; }
+        .rname { display: flex; align-items: center; gap: 18px; }
+        .rtick { color: #2E7D32; font-weight: 700; font-size: 34px; opacity: 0; display: inline-block; }
+        .price { font-size: 34px; }
+        .total { display: flex; justify-content: space-between; align-items: baseline; margin-top: 30px; }
+        .total-label { font-size: 48px; font-weight: 800; }
+        .total-value { font-size: 66px; font-weight: 800; color: #9E0027; display: inline-block; }
+        .pill { margin-top: 30px; height: 96px; border-radius: 100px; background: #FFFFFF; border: 3px solid #2E7D32; box-sizing: border-box; color: #2E7D32; display: flex; align-items: center; justify-content: center; gap: 16px; font-size: 34px; font-weight: 700; }
+        .pill svg { width: 40px; height: 40px; }
+        .fbubble-wrap { position: absolute; bottom: 88px; left: 52px; right: 52px; display: flex; flex-direction: column; }
+        .fbubble { max-width: 94%; align-self: flex-start; background: #EFEDED; color: #1B1C1C; padding: 26px 32px; font-size: 32px; line-height: 1.32; border-radius: 24px; border-bottom-left-radius: 4px; }
+        .fstamp { font-size: 24px; letter-spacing: 0.08em; color: #8C8A88; margin-top: 10px; }
+      </style>
+      <div data-hf-id="hf-p39m" id="root" data-composition-id="05-name-recap" data-width="1080" data-height="1920">
+        <section data-hf-id="hf-5t84" id="scene-05" class="clip" data-start="0" data-duration="22.18" data-track-index="1">
+          <div data-hf-id="hf-l1ou" class="device">
+            <div data-hf-id="hf-354e" class="sidebtn sb-power"></div><div data-hf-id="hf-ltr0" class="sidebtn sb-v1"></div><div data-hf-id="hf-wp8n" class="sidebtn sb-v2"></div>
+            <div data-hf-id="hf-cdmk" class="screen">
+              <div data-hf-id="hf-sz55" class="statusbar"><span data-hf-id="hf-zwmt">9:41</span><span data-hf-id="hf-mpb8" class="right-cluster"><span data-hf-id="hf-zh8g" class="sig"><i data-hf-id="hf-vg97" style="height:12px"></i><i data-hf-id="hf-irsm" style="height:17px"></i><i data-hf-id="hf-ht8a" style="height:22px"></i><i data-hf-id="hf-snef" style="height:27px"></i></span><span data-hf-id="hf-7g6e" class="batt"><i data-hf-id="hf-wt6k"></i></span></span></div>
+              <div data-hf-id="hf-y8gt" class="callview" id="nr-callview">
+                <div data-hf-id="hf-h4t2" class="brandbar">
+                  <div data-hf-id="hf-csd1" class="logo-avatar"><img data-hf-id="hf-6i5i" src="assets/cake-logo-transparent.png" alt=""></div>
+                  <div data-hf-id="hf-vc6l" class="brand head">Cake World Eatery</div>
+                </div>
+                <div data-hf-id="hf-wks2" class="callzone">
+                  <div data-hf-id="hf-2nbd" class="wave" id="nr-wave"><div data-hf-id="hf-ufsv" class="bar"></div><div data-hf-id="hf-c51b" class="bar"></div><div data-hf-id="hf-bqqa" class="bar"></div><div data-hf-id="hf-bcf9" class="bar"></div><div data-hf-id="hf-e4kg" class="bar"></div></div>
+                  <div data-hf-id="hf-fmaw" class="callee head">Fiona – AI Assistant</div>
+                  <div data-hf-id="hf-fe5m" class="status" id="nr-status">ACTIVE CALL · 00:33</div>
+                </div>
+                <div data-hf-id="hf-jk23" class="divider"></div>
+                <div data-hf-id="hf-vshe" class="chat">
+                  <div data-hf-id="hf-s0dj" class="bubble fiona" id="nr-b7"><span data-hf-id="hf-f7qd" class="wt" data-line="line07"></span></div>
+                  <div data-hf-id="hf-s5yc" class="stamp l" id="nr-s7">FIONA · 12:02 PM</div>
+                  <div data-hf-id="hf-hhz3" class="bubble thomas" id="nr-b8"><span data-hf-id="hf-6jui" class="wt" data-line="line08"></span></div>
+                  <div data-hf-id="hf-sviy" class="stamp r" id="nr-s8">THOMAS · 12:02 PM</div>
+                </div>
+              </div>
+              <div data-hf-id="hf-edge" class="orderview" id="nr-order">
+                <div data-hf-id="hf-t179" class="titlebar">
+                  <span data-hf-id="hf-tv10" class="chev">‹</span>
+                  <span data-hf-id="hf-l68l" class="title head">Pickup Order</span>
+                </div>
+                <div data-hf-id="hf-mcm7" class="content">
+                  <div data-hf-id="hf-plb4" class="customer">
+                    <div data-hf-id="hf-o4a3" class="avatar"><svg data-hf-id="hf-ft22" viewBox="0 0 24 24" fill="none" stroke="#1B1C1C" stroke-width="2" stroke-linecap="round"><circle data-hf-id="hf-jnj3" cx="12" cy="8" r="4" /><path data-hf-id="hf-ly38" d="M4 21c1.5-3.5 4.5-5 8-5s6.5 1.5 8 5" /></svg></div>
+                    <div data-hf-id="hf-yeow">
+                      <div data-hf-id="hf-6n3s" class="cust-label">CUSTOMER</div>
+                      <div data-hf-id="hf-toua" class="cust-name head" id="nr-name">Thomas Milton</div>
+                    </div>
+                  </div>
+                  <div data-hf-id="hf-2whe" class="hr"></div>
+                  <div data-hf-id="hf-zqso" class="section-title head">Order Details</div>
+                  <div data-hf-id="hf-thy4" class="row"><span data-hf-id="hf-ejij" class="rname">1 × Gobi Manchurian <span data-hf-id="hf-ci29" class="rtick" id="nr-t1">✓</span></span><span data-hf-id="hf-b47v" class="price mono">$11.99</span></div>
+                  <div data-hf-id="hf-lt04" class="row"><span data-hf-id="hf-sibq" class="rname">1 × Samosa <span data-hf-id="hf-g768" class="rtick" id="nr-t2">✓</span></span><span data-hf-id="hf-b90b" class="price mono">$4.99</span></div>
+                  <div data-hf-id="hf-km31" class="row"><span data-hf-id="hf-qrew" class="rname">1 × Paneer Tikka Masala <span data-hf-id="hf-rh2r" class="rtick" id="nr-t3">✓</span></span><span data-hf-id="hf-8irh" class="price mono">$13.99</span></div>
+                  <div data-hf-id="hf-l0e2" class="row"><span data-hf-id="hf-sevf" class="rname">1 × Veg Biriyani <span data-hf-id="hf-mnsy" class="rtick" id="nr-t4">✓</span></span><span data-hf-id="hf-im1d" class="price mono">$13.99</span></div>
+                  <div data-hf-id="hf-jwme" class="total"><span data-hf-id="hf-xobg" class="total-label head">Total</span><span data-hf-id="hf-sf50" class="total-value head" id="nr-total">$0.00</span></div>
+                  <div data-hf-id="hf-hdgs" class="pill" id="nr-pill"><svg data-hf-id="hf-f5uu" viewBox="0 0 24 24" fill="none" stroke="#2E7D32" stroke-width="2" stroke-linecap="round"><circle data-hf-id="hf-1iwn" cx="12" cy="12" r="9" /><path data-hf-id="hf-8ge0" d="M12 7v5l3.5 2" /></svg>Ready in 20–25 minutes</div>
+                </div>
+                <div data-hf-id="hf-kolt" class="fbubble-wrap">
+                  <div data-hf-id="hf-i5hc" class="fbubble" id="nr-b9"><span data-hf-id="hf-ahyj" class="wt" data-line="line09"></span></div>
+                  <div data-hf-id="hf-b8ds" class="fstamp" id="nr-s9">FIONA · 12:02 PM</div>
+                </div>
+              </div>
+              <div data-hf-id="hf-7sfr" class="island"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <script>
+        window.__timelines = window.__timelines || {};
+        (function () {
+          const WORDS = /*__WORDS__*/ {"line07":{"words":[{"text":"May","start":0.14,"end":0.259},{"text":"I","start":0.419,"end":0.439},{"text":"have","start":0.459,"end":0.56},{"text":"the","start":0.579,"end":0.699},{"text":"name","start":0.719,"end":0.959},{"text":"for","start":0.979,"end":1.1},{"text":"the","start":1.12,"end":1.199},{"text":"order?","start":1.259,"end":1.579}]},"line08":{"words":[{"text":"Thomas","start":0.099,"end":0.519},{"text":"Milton.","start":0.519,"end":0.899}]},"line09":{"words":[{"text":"Thank","start":0.159,"end":0.319},{"text":"you,","start":0.379,"end":0.439},{"text":"Thomas.","start":0.539,"end":0.939},{"text":"Your","start":1.259,"end":1.399},{"text":"order","start":1.519,"end":1.759},{"text":"includes","start":1.819,"end":2.299},{"text":"one","start":2.379,"end":2.519},{"text":"Gobi","start":2.619,"end":2.879},{"text":"Manchurian,","start":2.919,"end":3.599},{"text":"one","start":3.959,"end":4.119},{"text":"Samosa,","start":4.219,"end":4.739},{"text":"one","start":5.159,"end":5.319},{"text":"Paneer","start":5.44,"end":5.739},{"text":"Tikka","start":5.839,"end":6.059},{"text":"Masala","start":6.119,"end":6.599},{"text":"and","start":6.779,"end":6.879},{"text":"one","start":7,"end":7.159},{"text":"Veg","start":7.279,"end":7.48},{"text":"Biriyani.","start":7.559,"end":8.119},{"text":"Your","start":8.579,"end":8.699},{"text":"total","start":8.819,"end":9.059},{"text":"is","start":9.139,"end":9.239},{"text":"forty-four","start":9.359,"end":9.799},{"text":"dollars","start":9.88,"end":10.219},{"text":"and","start":10.26,"end":10.399},{"text":"ninety-six","start":10.5,"end":11.059},{"text":"cents.","start":11.119,"end":11.5},{"text":"Your","start":12,"end":12.099},{"text":"pickup","start":12.199,"end":12.5},{"text":"order","start":12.579,"end":12.839},{"text":"will","start":12.88,"end":13},{"text":"be","start":13.059,"end":13.179},{"text":"ready","start":13.239,"end":13.479},{"text":"in","start":13.519,"end":13.659},{"text":"twenty","start":13.719,"end":14.099},{"text":"to","start":14.139,"end":14.239},{"text":"twenty-five","start":14.279,"end":14.819},{"text":"minutes.","start":14.88,"end":15.299},{"text":"Is","start":15.839,"end":15.899},{"text":"everything","start":15.979,"end":16.28},{"text":"correct?","start":16.379,"end":16.839}]}};
+          const tl = gsap.timeline({ paused: true });
+          function buildLine(lineId, startLocal) {
+            const el = document.querySelector('.wt[data-line="' + lineId + '"]');
+            if (!el || !WORDS || !WORDS[lineId]) return;
+            for (const w of WORDS[lineId].words) {
+              const s = document.createElement("span");
+              s.textContent = w.text + " ";
+              s.style.opacity = "0.15";
+              el.appendChild(s);
+              tl.set(s, { opacity: 1 }, Math.max(0.01, startLocal + w.start));
+            }
+          }
+          function wave(start, len) {
+            const bars = gsap.utils.toArray("#nr-wave .bar");
+            bars.forEach((b, i) => {
+              const d = 0.3 + ((i * 5) % 7) / 40;
+              const rep = Math.max(0, Math.floor(len / d) - 1);
+              tl.fromTo(b, { scaleY: 0.25 + ((i * 13) % 17) / 60 }, { scaleY: 0.95 - ((i * 7) % 13) / 50, duration: d, ease: "sine.inOut", yoyo: true, repeat: rep }, start);
+              tl.to(b, { scaleY: 0.3, duration: 0.25, ease: "sine.out" }, start + len);
+            });
+          }
+          for (let s = 33; s <= 37; s++) {
+            tl.set("#nr-status", { textContent: "ACTIVE CALL · 00:" + String(s).padStart(2, "0") }, s - 32.7);
+          }
+          // phase A — name exchange in call view
+          tl.fromTo("#nr-b7", { opacity: 0, y: 34, scale: 0.97 }, { opacity: 1, y: 0, scale: 1, duration: 0.45, ease: "back.out(1.3)" }, 0.15);
+          tl.fromTo("#nr-s7", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 1.95);
+          buildLine("line07", 0.3);
+          wave(0.3, 1.8);
+          tl.fromTo("#nr-b8", { opacity: 0, y: 34, scale: 0.97 }, { opacity: 1, y: 0, scale: 1, duration: 0.45, ease: "back.out(1.3)" }, 2.55);
+          tl.fromTo("#nr-s8", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 3.7);
+          buildLine("line08", 2.7);
+          wave(2.7, 1.1);
+          // phase B — slide to the Pickup Order view
+          tl.fromTo("#nr-order", { x: 940 }, { x: 0, duration: 0.65, ease: "power3.inOut" }, 4.35);
+          tl.to("#nr-callview", { autoAlpha: 0, duration: 0.2 }, 4.85);
+          tl.fromTo("#nr-name", { scale: 0.85, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5, ease: "back.out(1.8)" }, 4.95);
+          tl.fromTo(".orderview .row", { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.35, ease: "power2.out", stagger: 0.1 }, 5.15);
+          buildLine("line09", 4.4);
+          // recap ticks in sync with Fiona naming each dish
+          const ticks = [["#nr-t1", 7.32], ["#nr-t2", 8.62], ["#nr-t3", 10.52], ["#nr-t4", 11.96]];
+          for (const [id, t] of ticks) {
+            tl.fromTo(id, { opacity: 0, scale: 0.2 }, { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(2.4)" }, t);
+          }
+          // total counts up as she says the amount
+          tl.fromTo("#nr-total", { opacity: 0.12 }, { opacity: 1, duration: 0.4, ease: "power2.out" }, 13.66);
+          const proxy = { v: 0 };
+          const totalEl = () => document.getElementById("nr-total");
+          tl.to(proxy, {
+            v: 44.96, duration: 1.76, ease: "power1.inOut",
+            onUpdate: function () { totalEl().textContent = "$" + proxy.v.toFixed(2); },
+          }, 13.76);
+          tl.fromTo("#nr-total", { scale: 1 }, { scale: 1.12, duration: 0.88, ease: "power1.in" }, 13.76);
+          tl.to("#nr-total", { scale: 1, duration: 0.5, ease: "back.out(1.6)" }, 15.52);
+          // ETA pill
+          tl.fromTo("#nr-pill", { opacity: 0, scale: 0.9, y: 16 }, { opacity: 1, scale: 1, y: 0, duration: 0.5, ease: "back.out(1.7)" }, 18.12);
+          tl.fromTo("#nr-s9", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 21.3);
+          window.__timelines["05-name-recap"] = tl;
+        })();
+      </script>
+    </template>
+  </body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head><meta charset="UTF-8"></head>
+  <body>
+    <template>
+      <style>
+        @font-face { font-family: "Work Sans"; font-style: normal; font-weight: 100 900; src: url("assets/fonts/work-sans-var.woff2") format("woff2"); }
+        @font-face { font-family: "Plus Jakarta Sans"; font-style: normal; font-weight: 100 900; src: url("assets/fonts/plus-jakarta-sans-var.woff2") format("woff2"); }
+        #root { position: absolute; inset: 0; width: 1080px; height: 1920px; background: #E9E5E2; overflow: hidden; font-family: "Work Sans", "Helvetica Neue", sans-serif; color: #1B1C1C; }
+        .clip { position: absolute; inset: 0; }
+        .device { position: absolute; left: 88px; top: 32px; width: 904px; height: 1856px; border: 6px solid #8A8378; border-radius: 96px; padding: 18px; background: #050505; box-sizing: border-box; box-shadow: 0 30px 80px rgba(0,0,0,0.28); }
+        .sidebtn { position: absolute; background: #7E786D; border-radius: 4px; }
+        .sb-power { right: -13px; top: 470px; width: 7px; height: 150px; }
+        .sb-v1 { left: -13px; top: 380px; width: 7px; height: 90px; }
+        .sb-v2 { left: -13px; top: 490px; width: 7px; height: 90px; }
+        .screen { position: relative; width: 100%; height: 100%; border-radius: 80px; overflow: hidden; background: #FBF9F9; display: flex; flex-direction: column; align-items: center; }
+        .island { position: absolute; top: 22px; left: 50%; transform: translateX(-50%); width: 236px; height: 62px; border-radius: 40px; background: #000; z-index: 6; }
+        .statusbar { position: absolute; top: 30px; left: 64px; right: 64px; display: flex; justify-content: space-between; align-items: center; z-index: 5; font-size: 30px; font-weight: 600; }
+        .sig { display: flex; gap: 5px; align-items: flex-end; }
+        .sig i { display: block; width: 7px; background: #1B1C1C; border-radius: 2px; }
+        .batt { display: inline-block; width: 50px; height: 24px; border: 3px solid rgba(27,28,28,0.4); border-radius: 8px; position: relative; margin-left: 12px; vertical-align: middle; }
+        .batt i { position: absolute; inset: 3px; right: 12px; background: #1B1C1C; border-radius: 3px; display: block; }
+        .right-cluster { display: flex; align-items: center; }
+        .head { font-family: "Plus Jakarta Sans", "Helvetica Neue", sans-serif; }
+        .brandbar { margin-top: 128px; width: 100%; padding: 0 56px; box-sizing: border-box; display: flex; align-items: center; gap: 26px; }
+        .logo-avatar { width: 96px; height: 96px; border-radius: 50%; background: #141414; display: grid; place-items: center; overflow: hidden; }
+        .logo-avatar img { width: 150%; max-width: none; height: auto; }
+        .brand { font-size: 46px; font-weight: 800; color: #9E0027; }
+        .callzone { margin-top: 66px; display: flex; flex-direction: column; align-items: center; }
+        .wave { display: flex; gap: 10px; align-items: center; height: 56px; }
+        .bar { width: 12px; height: 48px; border-radius: 6px; background: #BA1434; transform-origin: center; }
+        .callee { margin-top: 34px; font-size: 58px; font-weight: 700; }
+        .status { margin-top: 18px; font-size: 28px; font-weight: 600; letter-spacing: 0.12em; color: #8A8A8A; font-variant-numeric: tabular-nums; }
+        .divider { margin-top: 44px; width: 100%; height: 2px; background: #ECE9E8; transform-origin: center; }
+        .controls { position: absolute; bottom: 130px; width: 100%; display: flex; justify-content: space-evenly; align-items: flex-start; }
+        .control { display: flex; flex-direction: column; align-items: center; gap: 18px; font-size: 30px; color: #4E4D4B; }
+        .circle { width: 140px; height: 140px; border-radius: 50%; border: 3px solid #C9C6C4; background: #FFFFFF; box-sizing: border-box; display: grid; place-items: center; }
+        .circle svg { width: 56px; height: 56px; }
+        .end-circle { width: 170px; height: 170px; border-radius: 50%; background: #BA1434; display: grid; place-items: center; }
+        .end-circle svg { width: 72px; height: 72px; }
+        .end-label { color: #BA1434; font-weight: 700; }
+      </style>
+      <div data-hf-id="hf-j8q3" id="root" data-composition-id="02-answered" data-width="1080" data-height="1920">
+        <section data-hf-id="hf-mxt7" id="scene-02" class="clip" data-start="0" data-duration="2.5" data-track-index="1">
+          <div data-hf-id="hf-l1ou" class="device">
+            <div data-hf-id="hf-354e" class="sidebtn sb-power"></div><div data-hf-id="hf-ltr0" class="sidebtn sb-v1"></div><div data-hf-id="hf-wp8n" class="sidebtn sb-v2"></div>
+            <div data-hf-id="hf-cdmk" class="screen">
+              <div data-hf-id="hf-sz55" class="statusbar"><span data-hf-id="hf-zwmt">9:41</span><span data-hf-id="hf-mpb8" class="right-cluster"><span data-hf-id="hf-zh8g" class="sig"><i data-hf-id="hf-vg97" style="height:12px"></i><i data-hf-id="hf-irsm" style="height:17px"></i><i data-hf-id="hf-ht8a" style="height:22px"></i><i data-hf-id="hf-snef" style="height:27px"></i></span><span data-hf-id="hf-7g6e" class="batt"><i data-hf-id="hf-wt6k"></i></span></span></div>
+              <div data-hf-id="hf-odrs" class="brandbar" id="an-brandbar">
+                <div data-hf-id="hf-csd1" class="logo-avatar"><img data-hf-id="hf-6i5i" src="assets/cake-logo-transparent.png" alt=""></div>
+                <div data-hf-id="hf-vc6l" class="brand head">Cake World Eatery</div>
+              </div>
+              <div data-hf-id="hf-wks2" class="callzone">
+                <div data-hf-id="hf-vlxa" class="wave" id="an-wave"><div data-hf-id="hf-ufsv" class="bar"></div><div data-hf-id="hf-c51b" class="bar"></div><div data-hf-id="hf-bqqa" class="bar"></div><div data-hf-id="hf-bcf9" class="bar"></div><div data-hf-id="hf-e4kg" class="bar"></div></div>
+                <div data-hf-id="hf-q0zm" class="callee head" id="an-callee">Fiona – AI Assistant</div>
+                <div data-hf-id="hf-mqd1" class="status" id="an-status">ACTIVE CALL · 00:00</div>
+              </div>
+              <div data-hf-id="hf-ozao" class="divider" id="an-divider"></div>
+              <div data-hf-id="hf-jx3o" class="controls" id="an-controls">
+                <div data-hf-id="hf-5eu6" class="control"><div data-hf-id="hf-xmwk" class="circle"><svg data-hf-id="hf-ft22" viewBox="0 0 24 24" fill="none" stroke="#1B1C1C" stroke-width="2" stroke-linecap="round"><path data-hf-id="hf-0c5q" d="M12 3a3 3 0 013 3v5a3 3 0 01-6 0V6a3 3 0 013-3z" /><path data-hf-id="hf-ktgv" d="M5 11a7 7 0 0014 0M12 18v3M3 3l18 18" /></svg></div>Mute</div>
+                <div data-hf-id="hf-sxh3" class="control"><div data-hf-id="hf-tajw" class="end-circle"><svg data-hf-id="hf-ja02" viewBox="0 0 24 24" fill="#fff" transform="rotate(135)"><path data-hf-id="hf-t1p5" d="M6.6 2.8c-.9-.9-2.4-.9-3.2.1L2.2 4.3c-.8.9-.9 2.2-.4 3.3 1.6 3.6 4 6.9 7 9.9s6.3 5.4 9.9 7c1.1.5 2.4.4 3.3-.4l1.4-1.2c1-.8 1-2.3.1-3.2l-2.7-2.7c-.7-.7-1.8-.9-2.7-.4l-2 1c-2-1.3-3.8-2.9-5.3-4.7l1.1-2.1c.5-.9.3-2-.4-2.7L6.6 2.8z" /></svg></div><span data-hf-id="hf-u88m" class="end-label">End</span></div>
+                <div data-hf-id="hf-ruwc" class="control"><div data-hf-id="hf-joek" class="circle"><svg data-hf-id="hf-7y16" viewBox="0 0 24 24" fill="none" stroke="#1B1C1C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path data-hf-id="hf-awnl" d="M11 5L6 9H3v6h3l5 4V5z" /><path data-hf-id="hf-mwi3" d="M15.5 8.5a5 5 0 010 7M18.5 5.5a9 9 0 010 13" /></svg></div>Speaker</div>
+              </div>
+              <div data-hf-id="hf-7sfr" class="island"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <script>
+        window.__timelines = window.__timelines || {};
+        (function () {
+          const tl = gsap.timeline({ paused: true });
+          tl.fromTo("#an-brandbar", { opacity: 0, y: -26 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 0.12);
+          tl.fromTo("#an-wave .bar", { scaleY: 0.15, opacity: 0 }, { scaleY: 0.55, opacity: 1, duration: 0.4, ease: "back.out(1.6)", stagger: 0.06 }, 0.3);
+          tl.fromTo("#an-callee", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 0.45);
+          tl.fromTo("#an-status", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 0.62);
+          tl.fromTo("#an-divider", { scaleX: 0 }, { scaleX: 1, duration: 0.5, ease: "power2.out" }, 0.72);
+          tl.fromTo("#an-controls .control", { opacity: 0, y: 34 }, { opacity: 1, y: 0, duration: 0.45, ease: "power2.out", stagger: 0.09 }, 0.8);
+          tl.set("#an-status", { textContent: "ACTIVE CALL · 00:01" }, 1.0);
+          tl.set("#an-status", { textContent: "ACTIVE CALL · 00:02" }, 2.0);
+          tl.fromTo("#an-wave .bar", { scaleY: 0.55 }, { scaleY: 0.3, duration: 0.5, ease: "sine.inOut" }, 1.6);
+          window.__timelines["02-answered"] = tl;
+        })();
+      </script>
+    </template>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+# Generated video outputs
+renders/
+
+# Local preview, inspection, and editor caches
+snapshots/
+.thumbnails/
+.waveform-cache/
+.hyperframes/
+
+# Local design exploration artifacts
+design-options/
+
+# macOS metadata
+.DS_Store

@@ -1,0 +1,44 @@
+[
+  {
+    "id": "w0",
+    "text": "I'd",
+    "start": 0.119,
+    "end": 0.239
+  },
+  {
+    "id": "w1",
+    "text": "like",
+    "start": 0.28,
+    "end": 0.359
+  },
+  {
+    "id": "w2",
+    "text": "to",
+    "start": 0.379,
+    "end": 0.459
+  },
+  {
+    "id": "w3",
+    "text": "place",
+    "start": 0.5,
+    "end": 0.659
+  },
+  {
+    "id": "w4",
+    "text": "a",
+    "start": 0.68,
+    "end": 0.759
+  },
+  {
+    "id": "w5",
+    "text": "pickup",
+    "start": 0.779,
+    "end": 1.039
+  },
+  {
+    "id": "w6",
+    "text": "order.",
+    "start": 1.1,
+    "end": 1.399
+  }
+]

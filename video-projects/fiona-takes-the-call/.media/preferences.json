@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "preferences": {
+    "destination": {
+      "value": "reels-shorts",
+      "confirmed_in": ["fiona-takes-the-call"],
+      "updated_at": "2026-07-19T21:53:18.798Z"
+    },
+    "aspect": {
+      "value": "1080x1920",
+      "confirmed_in": ["fiona-takes-the-call"],
+      "updated_at": "2026-07-19T21:53:18.825Z"
+    },
+    "language": {
+      "value": "en",
+      "confirmed_in": ["fiona-takes-the-call"],
+      "updated_at": "2026-07-19T21:53:18.849Z"
+    },
+    "flow": {
+      "value": "automation",
+      "confirmed_in": ["fiona-takes-the-call"],
+      "updated_at": "2026-07-19T21:53:18.872Z"
+    },
+    "storyboard": {
+      "value": "yes",
+      "confirmed_in": ["fiona-takes-the-call"],
+      "updated_at": "2026-07-19T21:53:18.894Z"
+    }
+  },
+  "sightings": {}
+}

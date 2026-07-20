@@ -1,0 +1,26 @@
+[
+  {
+    "id": "w0",
+    "text": "Yes,",
+    "start": 0.159,
+    "end": 0.539
+  },
+  {
+    "id": "w1",
+    "text": "everything",
+    "start": 0.819,
+    "end": 1.159
+  },
+  {
+    "id": "w2",
+    "text": "is",
+    "start": 1.199,
+    "end": 1.299
+  },
+  {
+    "id": "w3",
+    "text": "correct.",
+    "start": 1.379,
+    "end": 1.759
+  }
+]
